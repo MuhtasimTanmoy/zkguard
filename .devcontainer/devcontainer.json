@@ -1,0 +1,23 @@
+{
+  "name": "zkguard - noir",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace/noir",
+  "workspaceMount": "source=${localWorkspaceFolder}/noir,target=/workspace/noir,type=bind,consistency=cached",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "python.pythonPath": "/usr/bin/python3"
+      },
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "ms-python.python",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
