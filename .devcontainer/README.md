@@ -22,3 +22,13 @@ How to use
 3. Click the green remote icon in the lower-left and choose "Open Folder in Container..." and select the `noir/` folder.
 
 docker build -f .devcontainer/Dockerfile -t zkguard-noir .
+
+
+
+python3 -m pip install -r requirements.txt coincurve \
+&& curl -L https://raw.githubusercontent.com/noir-lang/noirup/main/install | bash \
+&& source /home/vscode/.bashrc \
+&& noirup \
+&& curl -L https://raw.githubusercontent.com/AztecProtocol/aztec-packages/refs/heads/next/barretenberg/bbup/install | bash \
+&& source ~/.bashrc \
+&& bbup
